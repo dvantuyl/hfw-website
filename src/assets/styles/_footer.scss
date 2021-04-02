@@ -1,0 +1,46 @@
+footer {
+  border-top: 5px solid #00483d;
+  background-color: rgba(white, 0.4);
+
+  .footer-inner {
+    border-top: 5px solid #3f746c;
+    border-bottom: 5px solid #3f746c;
+    background-color: rgba(94, 175, 156, 0.4);
+    p {
+      font-size: 11px;
+      line-height: 18px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+
+  .sponsors {
+    a {
+      background-color: white;
+      margin: 5px;
+      padding: 2px;
+
+      img {
+        height: 50px;
+      }
+    }
+  }
+
+  .bottom-nav {
+    .nav-item > * {
+      font-weight: normal;
+      color: #3f746c;
+      &.active {
+        color: #dc5849;
+        &:hover {
+          color: #dc5849;
+        }
+      }
+      &:hover {
+        color: #d8a894;
+      }
+    }
+  }
+}

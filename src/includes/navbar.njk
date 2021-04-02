@@ -1,0 +1,34 @@
+<div class="navbar-container">
+  <div class="row">
+    <div class="col-10 col-md-4 mx-auto">
+      <a class="d-block mx-auto my-4" href="{{ '/' | url }}">
+        <img
+          class="logo"
+          src="{{ '/assets/images/logo.svg' | url }}"
+          alt="HONK! Fest West"
+        />
+      </a>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav justify-content-center">
+    {%- for item in collections.all | eleventyNavigation %}
+      <li class="nav-item">
+        <a
+          class="nav-link ft-fml-1 {% if page.url == (item.url | url) %}active{% endif %}"
+          href="{{ item.url | url }}"
+          >{{ item.title }}</a
+        >
+      </li>
+      <li><span class="nav-bullet">&#8226;</span></li>
+    {%- endfor %}
+      <li class="nav-item social-links">
+      {%- for item in navigation.social %}
+        <a class="social-link" target="_blank" href="{{ item.link }}"
+          ><i class="fab {{ item.icon }}"></i
+        ></a>
+      {% endfor %}
+      </li>
+    </ul>
+  </nav>
+</div>

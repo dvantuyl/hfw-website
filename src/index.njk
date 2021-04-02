@@ -1,0 +1,236 @@
+---
+layout: default
+title: HONK! Fest West
+carousel_images:
+  - /assets/images/carousel/001.jpg
+  - /assets/images/carousel/002.jpg
+  - /assets/images/carousel/003.jpg
+  - /assets/images/carousel/004.jpg
+  - /assets/images/carousel/005.jpg
+  - /assets/images/carousel/006.jpg
+  - /assets/images/carousel/007.jpg
+  - /assets/images/carousel/008.jpg
+  - /assets/images/carousel/009.jpg
+golden_dino: show
+---
+
+<div id="index-page" class="container">
+  <div
+    itemscope
+    itemtype="http://schema.org/Festival"
+    class="contrast-container"
+  >
+    <meta
+      itemprop="description"
+      content="HONK! Fest West is an accessible community music festival driven by the energetic performances of street bands in public spaces. In 2020, we are embracing activism by engaging with and empowering the underserved communities of our region."
+    />
+    <link itemprop="url" href="https://www.honkfestwest.org" rel="author" />
+    <h2
+      class="ft-fml-2 ft-clr-2 text-center m-0 d-flex justify-content-center flex-wrap text-4xl"
+      style="letter-spacing: 0.04em"
+    >
+      <a
+        class="d-block font-weight-normal"
+        itemprop="url"
+        href="https://www.honkfestwest.org"
+        ><span itemprop="name">HONK! Fest West</span></a
+      >
+      <div class="d-none d-sm-none d-md-block">&nbsp;|&nbsp;</div>
+
+      <div
+        itemprop="address"
+        itemscope
+        itemtype="http://schema.org/PostalAddress"
+      >
+        <div>
+          <span itemprop="addressLocality">Seattle</span>,
+          <span itemprop="addressRegion">Washington</span>
+        </div>
+      </div>
+    </h2>
+  </div>
+
+  {%- for post in collections.post %}
+  <div class="contrast-container">
+    <h2 class="ft-fml-1 ft-bdr-1 text-4xl mb-2">
+      <span class="ft-clr-1">{{ post.data.title }}</span>
+      <span class="text-muted">{{ post.data.subtitle }}</span>
+    </h2>
+    <div class="row">
+      <div class="col-md-5 col-lg-3">
+        <a target="_blank" href="{{ post.data.external_url }}">
+          <img
+            class="img-link img-fluid"
+            src="{{ post.data.image_url | url }}"
+          />
+        </a>
+      </div>
+      <div class="col-md-7 col-lg-9 pt-3 pt-md-1">
+        <ul class="list-unstyled">
+          <li>
+            {% if post.data.event_date %}
+            <strong>
+              <span class="text-muted">When:</span>
+              {{ post.data.event_date }} 
+              {% if post.data.event_time_end %} to {{ post.data.event_time_end }} {% endif %}
+            </strong>
+            {% endif %}
+          </li>
+          <li>
+            {% if post.data.location %}
+            <strong>
+              <span class="text-muted">Where:</span>
+              <a
+                href="https://www.google.com/maps/search/{{ post.data.location }}"
+                target="_blank"
+                >{{ post.data.location }}</a
+              >
+            </strong>
+            {% endif %}
+          </li>
+        </ul>
+        <div>{{ post.templateContent | safe }}</div>
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+
+  <div class="contrast-container">
+    <h2 class="ft-fml-1 ft-bdr-1 text-4xl mb-2">
+      <span class="ft-clr-1">Volunteers Needed!</span>
+    </h2>
+    <div class="row">
+      <div class="col-md-5 col-lg-3">
+        <a
+          target="_blank"
+          href="https://www.volcor.net/TakeSurvey2.aspx?s=2414_honkwest"
+        >
+          <img
+            class="img-link img-fluid"
+            src="{{ '/assets/images/volunteer.jpg' | url }}"
+          />
+        </a>
+      </div>
+      <div class="col-md-7 col-lg-9 pt-3 pt-md-1">
+        <div>
+          <p class="mb-4">
+            HONK! Fest West is completely free to the public. We run almost
+            entirely on the donations from fans like YOU and the hard work of
+            our volunteers. For this year's festival, we need dedicated,
+            passionate volunteers with a passion for live music and community
+            involvement. If this sounds like you, we'd love to have you join our
+            team!
+          </p>
+          <p class="mb-4">
+            You can register to volunteer here:
+            <a target="_blank" href="https://bit.ly/2DB9L2r"
+              >https://bit.ly/2DB9L2r</a
+            >.
+          </p>
+          <p class="mb-4">
+            More info on volunteering for HONK! Fest West on our
+            <a href="{{ '/volunteer.html' | url }}">Volunteer Page</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="contrast-container rounded">
+        <h2 class="ft-fml-1 ft-clr-1 ft-bdr-1 text-center text-4xl mb-2">About</h2>
+        <p class="mb-4">
+          HONK! Fest West is an accessible community music festival driven by
+          the energetic performances of street bands in public spaces. In 2019,
+          we are embracing activism by engaging with and empowering the
+          underserved communities of our region.
+        </p>
+        <div class="d-flex justify-content-left">
+          <a
+            class="btn btn-secondary d-block"
+            href="{{ '/about' | url }}"
+            role="button"
+            >Read more »</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="contrast-container rounded">
+        <h2 class="ft-fml-1 ft-clr-1 ft-bdr-1 text-center text-4xl mb-2">Volunteer</h2>
+        <p class="mb-4">
+          If you want to volunteer, and help make HONK! Fest West magic, contact
+          our Volunteer Coordinator via our volunteer page or send an email to
+          <a href="mailto:volunteers@honkfestwest.org"
+            >volunteers@honkfestwest.org</a
+          >
+        </p>
+        <div class="d-flex justify-content-left">
+          <a
+            class="btn btn-secondary d-block"
+            href="{{ '/volunteer' | url }}"
+            role="button"
+            >Read more »</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="contrast-container rounded">
+        <h2 class="ft-fml-1 ft-clr-1 ft-bdr-1 text-center text-4xl mb-2">Donate</h2>
+        <p class="mb-4">
+          Your contributions help make this event possible. Through the generous
+          efforts of our shared community, we’ll keep bringing music to the
+          streets and parks of Seattle’s neighborhoods.
+        </p>
+        <div class="d-flex justify-content-left">
+          <a
+            class="btn btn-secondary d-block"
+            href="{{ '/donate' | url }}"
+            role="button"
+            >Read more »</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="imageCarousel"
+    class="carousel slide contrast-container p-3"
+    data-ride="carousel"
+  >
+    <div class="carousel-inner">
+      {% for image in carousel_images %}
+      <div
+        class="carousel-item {% if forloop.first == true %}active{% endif %}"
+        data-interval="4000"
+      >
+        <div
+          style="background-image: url({{ image | url }})"
+          class="d-block w-100"
+        ></div>
+      </div>
+      {% endfor %}
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#imageCarousel"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#imageCarousel"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="footer-inner">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-md-4 text-center flex flex-column items-center">
+        <h3 class="ft-fml-2 ft-clr-3">Media Sponsor</h3>
+        <a href="{{ sponsors.kuow.link }}" target="_blank">
+          <img
+            src="{{ sponsors.kuow.image | url }}"
+            alt="{{ sponsors.kuow.name }}"
+            style="height: 80px;"
+          />
+        </a>
+      </div>
+      <div class="col-md-4 text-center">
+        <a href="{{ sponsors.shunpike.link }}" target="_blank">
+          <img
+            src="{{ sponsors.shunpike.image | url }}"
+            alt="{{ sponsors.shunpike.name }}"
+            class="rounded mx-auto d-block"
+            style="padding: 10px; height: 80px; background-color: #f4efdf;"
+          />
+        </a>
+        <p>
+          HONK! Fest West is fiscally sponsored by Shunpike.<br />
+          <b>About Shunpike</b><br />
+          Shunpike is the 501(c)(3) non-profit agency that provides independent
+          arts groups in Washington State with the services, resources, and
+          opportunities they need to forge their own paths to sustainable
+          success.
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h3 class="ft-fml-2 ft-clr-3">Sponsors</h3>
+        <div class="d-flex justify-content-around">
+          <a href="{{ sponsors.neighborhoods.link }}" target="_blank">
+            <img
+              src="{{ sponsors.neighborhoods.image | url }}"
+              alt="{{ sponsors.neighborhoods.name }}"
+              class="mx-auto d-block rounded"
+              style="padding: 2px; margin: 5px; height: 90px; background-color: white;"
+            />
+          </a>
+        </div>
+        <div class="sponsors d-flex flex-wrap justify-content-around">
+          {% set sponsors = sponsors.arts %}
+          {% for sponsor in sponsors %}
+          <a href="{{ sponsor.link }}" target="_blank" class="rounded">
+            <img
+              src="{{ sponsor.image | url }}"
+              alt="{{ sponsor.name }}"
+              class="rounded"
+            />
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dino-track">
+  <div class="container py-3 bottom-nav">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <a class="clr-home" href="{{ '/' | url }}"
+          >© 2020 HONK! Fest West</a
+        >
+        <a
+          href="{{ '/committee.html' | url }}"
+          id="golden-dino"
+          class="{% if page.golden_dino == 'show' %}active{% endif %}"
+        ></a>
+      </div>
+      <div class="col-md-4 text-center">
+        <ul class="nav justify-content-around">
+          {% for item in navigation.social %}
+          <li class="nav-item social-links">
+            <a class="social-link" target="_blank" href="{{ item.link }}"
+              ><i class="fab {{ item.icon }}"></i
+            ></a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-4 text-center"><a href="#">Back to top</a></div>
+    </div>
+  </div>
+</div>

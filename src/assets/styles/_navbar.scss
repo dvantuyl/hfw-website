@@ -1,0 +1,34 @@
+.navbar-container {
+  .logo {
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  .nav {
+    font-size: 1.5em;
+  }
+
+  .nav-item > * {
+    font-weight: normal;
+    color: #3f746c;
+    &.active {
+      color: #dc5849;
+      &:hover {
+        color: #dc5849;
+      }
+    }
+    &:hover {
+      color: #d8a894;
+    }
+  }
+
+  .nav-bullet {
+    line-height: 1.8em;
+    color: #3f746c;
+  }
+
+  .social-links {
+    padding: 5px 16px;
+  }
+}
