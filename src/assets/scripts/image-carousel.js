@@ -1,8 +1,9 @@
 import EmblaCarousel from 'embla-carousel'
 
-export const imageCarousel = {
-  start: () => {
+export const ImageCarousel = {
+  load: () => {
     const wrap = document.querySelector('.carousel')
+    if (!wrap) return
     const viewPort = wrap.querySelector('.carousel__viewport')
     const prevBtn = wrap.querySelector('.carousel__button--prev')
     const nextBtn = wrap.querySelector('.carousel__button--next')
